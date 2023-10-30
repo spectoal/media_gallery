@@ -1,123 +1,150 @@
-:root {
-  --font: system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
-  --charcoal: #222; /*-- sets variables under the :root element --*/
-  background-color: var(--charcoal); /*-- the var() function uses a variable --*/
+:root {/*-- sets color variables --*/
+  --dark: #444;
+  --ltmid: #DDD;
+  --dkmid: #999;
+  --light: #F9F9F9;
+  --accent: #6495ed;
 }
 body {
-  padding: 1rem;
-  margin: 2rem;
-  color: var(--charcoal); /*-- uses a variable for text color --*/
-  font-family: var(--font); /*-- uses a variable for font-family --*/
+  color: var(--dark); /*-- sets body default font color --*/
+  line-height: 1.4; /*-- sets body default line height --*/
 }
-h1 {
-  margin-top: 1rem;
-  margin-bottom: .5rem;
-  font: 800 1.8rem/1.2 var(--font); /*-- style, variant, weight, size/line, family --*/
-  color: rgba(255, 0, 255, 0.67); /*-- rgba color is 0 to 255 red, green, blue, and 0 to 1 alpha --*/
-}
-h1 span {
-  font-weight: 400; /*-- accepts values between 100 and 900 in increments of 100 --*/
-}
-i {
-  font-weight: 700; /*-- 700 weight is 'heavier' than 400 weight --*/
-  text-transform: capitalize; /*-- capitalizes only the first letters of words --*/
-  opacity: 0.67; /*-- sets the alpha channel value; accepts a decimal between 0 and 1 --*/
-}
-/*-- children defaults --*/
-.grid-item {
-  background-color: aliceblue;
-  border: 4px solid royalblue;
-  padding: 1rem;
-  margin: 1rem;
-}
-/*-- Regular layout method, targets children --*/
-.grid-item {
-  display: block; /*-- toggle to inline and inline-block, note default whitespace --*/
-  margin: auto; /*-- use margin for spacing --*/
-  width: auto;  /*-- e.g. 31% or 24%, but only works with inline and inline-block --*/
-}
-/*--------------
-- GRID LAYOUT  -
-----------------*/
-.grid-container {
-  border: 2px dashed fuchsia;
-/*-- enables grid layout --*/
-   display: grid; 
-   grid-gap: 1em; 
-   grid-template-columns: 1fr 1fr 1fr 1fr; 
-  /*-- with auto-fit and minmax() --*/
-   grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); 
-   grid-template-rows: 250px 100px 10% ; 
-  /*-- with minmax and auto-fill--*/
-   grid-template-rows:
-    minmax(100px, max-content)
-    repeat(auto-fill, 200px) 20%;  
-}
-/* -- media queries for grid, note that order matters! --*/
-@media screen and (max-width: 1280px) {
-  .grid-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 500px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
-}
- 
-/*--GRID AREA LAYOUT METHOD --*/
+/*-- default styles for links (in the correct order) --*/
+a {color: var(--accent); font-weight: 500; text-decoration: none; transition: all .2s ease-in-out;}
+a:visited {color:#305eb3;}
+a:hover {color: var(--accent);}
+a:active {color: var(--dkmid);}
 
-.grid-container {
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-areas:
-                      "head head head"
-                      "feat1 feat2 feat3"
-                      "wall blog1 blog1"
-                      "wall blog2 blog2"
-                      "wall blog3 blog3"
-                      "wall blog4 blog4"
-                      "close1 close1 close2"
-                      "foot foot foot";
+nav { /*-- main nav styles --*/
+  background-color: var(--ltmid); /*-- nav background --*/
+  padding: 1rem 2rem; /*-- inside padding --*/
+  display: flex; /*-- nav is a flex container --*/
+  min-height: 6rem; /*-- nav has a minimum height --*/
+  justify-content: space-between; /*-- excess space is distributed between flex children along the main axis --*/
+  align-items: center; /*-- flex children are centered on the cross axis  --*/
 }
-.grid-container > p:nth-child(1) {
-  grid-area: head;
+nav a { /*-- targets the nav links --*/
+  padding-left: 1.5rem; /*-- keeps links separated --*/
+  color: var(--dark); /*-- link color --*/
+  font-weight: 500; /*-- heavier type weight --*/
+  text-decoration: none; /*-- removes default link underline --*/
+  transition: all .2s ease-in-out; /*-- gives a transition for hover effects --*/
 }
-.grid-container > p:nth-child(2) {
-  grid-area: feat1;
+nav a:hover { /*-- nav links on hover --*/
+  color: var(--accent); /*-- changes link color on hover --*/
 }
-.grid-container > p:nth-child(3) {
-  grid-area: feat2;
+a.logo { /*-- nav link with .logo class --*/
+  flex-basis: 67%; /*-- makes the logo link take up most of the horizontal space --*/
+  text-transform: uppercase; /*-- makes logo link typographically distinct --*/
+  font-weight: 900; /*-- heaviest font weight --*/
 }
-.grid-container > p:nth-child(4) {
-  grid-area: feat3;
+a.trigram { /*-- hamburger menu icon nav link --*/
+  display: none; /*-- hidden by default --*/
+  font-size: 3rem; /*-- makes it considerably larger --*/
+  align-self: stretch; /*-- tells it to fill the cross axis when present --*/
 }
-.grid-container > p:nth-child(5) {
-  grid-area: wall;
+main {
+  padding: 1rem 2rem; /*-- adds inside space around the main content area --*/
 }
-.grid-container > p:nth-child(6) {
-  grid-area: blog1;
+.slideshow { /*-- replace these styles with your slideshow styles --*/
+  display: flex; /*-- declares a flex container --*/
+  justify-content: center; /*-- center in the main axis --*/
+  align-items: center; /*-- center in the cross axis --*/
+  height: 55rem; /*-- fixed hieght, probably delete this --*/
+  border: 2px dashed var(--dkmid); /*-- unsubtle border --*/
+  border-radius: 8px; /*-- rounded corners --*/
+  background-color: var(--light); /*-- a bit of light background color --*/
+  color: var(--dkmid); /*-- text color is mid --*/
+  position: relative; /*-- allows explicit positioning for children --*/
 }
-.grid-container > p:nth-child(7) {
-  grid-area: blog2;
+.controls button { /*-- you'll probably replace all .controls styles with your own --*/
+  cursor: pointer; /*-- changes hover cursor to the hand --*/
+  position: absolute; /*-- positions arrows absolutely--*/
+  width: auto; /*-- matches width of parent --*/
+  top: 40%; /*-- positions arrows from parent top --*/
+  color: var(--ltmid); /*-- arrow color --*/
+  background-color: transparent; /*-- hides button background --*/
+  border: none; /*-- removes default button border --*/
+  font-weight: 800; /*-- selects heavier font --*/
+  font-size: 8rem; /*-- sets arrow font size --*/
+  transition: 0.2s ease; /*-- sets transition speed for arrow hover--*/
 }
-.grid-container > p:nth-child(8) {
-  grid-area: blog3;
+.controls button:hover {
+  color: var(--accent); /*-- changes button color on hover --*/
 }
-.grid-container > p:nth-child(9) {
-  grid-area: blog4;
+.controls button:nth-child(1) {
+  left: 1rem; /*-- positions first arrow to the left --*/
 }
-.grid-container > p:nth-child(10) {
-  grid-area: close1;
+.controls button:nth-child(2) {
+  right: 1rem; /*-- positions second arrow to the right --*/
 }
-.grid-container > p:nth-child(11) {
-  grid-area: close2;
+.slideshow h2 { /*-- styles the placeholder text (probably safe to delete) --*/
+  font-size: 4rem; /*-- font is larger than normal --*/
 }
-.grid-container > p:nth-child(12) {
-  grid-area: foot;
+.hero {
+  padding: 4rem 0; /*-- top and bottom padding for the container --*/
+  display: flex; /*-- declares a flex container --*/
+  flex-direction: column; /*-- direction downward --*/
+  justify-content: center; /*-- vertical center --*/
+  align-items: center; /*-- horizontal center --*/
+  background-color: var(--ltmid); /*-- light color --*/
+  width: 100vw; /*-- extra wide --*/
+  margin: 2rem 0 1rem -2rem; /*-- negative right margin compensates for extra width --*/
+}
+.hero > * { /*-- targets all direct children of .hero --*/
+  margin: 0; /*-- zeroes their margins --*/
+  padding: 0; /*-- zeroes their padding --*/
+}
+.grid-cont { /*-- styles the main grid container for media cards --*/
+  padding: 2rem 0; /*-- top and bottom padding for the grid container --*/
+  display: grid; /*-- declares this a grid container --*/
+  grid-gap: 2rem; /*-- 2rem top, right, bottom, and left gaps between items --*/
+  grid-template-columns: 1fr; /*-- by default, there is 1 column that's 1fr wide --*/
+}
+@media screen and (min-width: 550px) { /*-- at slightly larger size, there are two equal columns --*/
+  .grid-cont {grid-template-columns: repeat(2, 1fr);}
+}
+@media screen and (min-width: 768px) { /*-- still two equal columns --*/
+  .grid-cont {grid-template-columns: repeat(2, 1fr);}
+}
+@media screen and (min-width: 1280px) { /*-- next size up, there are three equal columns --*/
+  .grid-cont {grid-template-columns: repeat(3, 1fr);}
+}
+@media screen and (min-width: 1440px) { /*-- at the largest sizes, there are four equal columns --*/
+  .grid-cont {grid-template-columns: repeat(4, 1fr);}
+}
+.card { /*-- selects .card elements --*/
+  padding: 2%; /*-- a little bit of flexible space inside the card --*/
+  display: flex; /*-- card is a flex container --*/
+  flex-direction: column; /*-- flow is downward --*/
+  border-radius: 8px; /*-- curved edges --*/
+  border: 2px dashed var(--dkmid); /*-- dashed border --*/
+  background-color: var(--light); /*-- a little bit of light color --*/
+}
+.card img { /*-- selects image children of .card --*/
+  width: 100%; /*-- full width of container --*/
+  height: auto; /*-- maintain aspect ratio --*/
+  max-height: 320px; /*-- can't be too tall --*/
+  border-radius: 8px 8px 0 0; /*-- curved corners, but just on the top --*/
+}
+.card button { /*-- selects button children of .card elements --*/
+  width: 30%; /*-- 1/3rd width of parent (the .card) --*/
+  min-width: 6rem; /*-- can't be too narrow --*/
+  margin: 2rem auto; /*-- centered it --*/
+  padding: 1rem 2rem; /*-- makes space inside the button --*/
+  cursor: pointer; /*-- changes the mouse cursor from arrow to pointer --*/
+}
+footer { /*-- just some footer styles, nothing weird --*/
+  margin-top: 2rem; /*-- adds space above --*/
+  background-color: var(--ltmid); /*-- light mid color --*/
+  padding: 1rem 2rem; /*-- inside space to match the nav --*/
+  display: flex; /*-- might as well --*/
+  height: 6rem; /*-- fixed height  --*/
+  justify-content: space-between; /*-- horizontal center --*/
+  align-items: center; /*-- vertical center --*/
+}
+footer p { /*-- targets the footer text --*/
+  width: 100%; /*-- p elements are full width of the container --*/
+  text-align: center; /*-- centers the text --*/
+  font-weight: 500; /*-- mid-weight font --*/
 }
