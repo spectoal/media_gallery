@@ -4,22 +4,28 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Media Starter</title>
-  <link rel="stylesheet" href="css/modnorm.min.css">
-  <link rel="stylesheet" href="css/nocom.css"><!--no comments-->
+  <title>Media Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styless.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200..300" rel="stylesheet" />  
+
 </head>
+
 <body>
-  <header class="top-nav">
-    <a href="#" class="nav-link logo">Site&nbsp;Title</a>
+
+  <header class="tnav">
     <nav id="site-nav" class="nav-wrap">
-      <a href="#" class="nav-link">News</a>
+      <a href="#" class="nav-link">Home</a>
       <a href="#" class="nav-link">About</a>
-      <a href="#" class="nav-link">Specials</a>
+      <a href="#" class="nav-link">News</a>
       <a href="#" class="nav-link">Contact</a>
     </nav>
     <a href="#" class="nav-link" id="trigram" onclick="navToggle()"></a>
   </header>
   <main>
+    
+
+    
     <section class="slideshow">
       <figure class="slides">
         <img src="https://picsum.photos/seed/1st/1440/520" />
@@ -47,83 +53,94 @@
         <p id="caption"></p>
       </div>
     </section>
-    <div class="thumbs">
-      <img class="thumb" src="https://picsum.photos/seed/1st/240/80" onclick="currentSlide(1)" 
-      alt="View from among the trees" />
-      <img class="thumb" src="https://picsum.photos/seed/2nd/240/80" onclick="currentSlide(2)" 
-      alt="I'll take what's behind door #2" />
-      <img class="thumb" src="https://picsum.photos/seed/3rd/240/80" onclick="currentSlide(3)" 
-      alt="Clouds coming off the mountains" />
-      <img class="thumb" src="https://picsum.photos/seed/4th/240/80" onclick="currentSlide(4)" 
-      alt="What is the point of a photo like this?" />
-      <img class="thumb" src="https://picsum.photos/seed/5th/240/80" onclick="currentSlide(5)" 
-      alt="I guess the cup is what's important" />
-      <img class="thumb" src="https://picsum.photos/seed/6th/240/80" onclick="currentSlide(6)" 
-      alt="Should I grab it?" />
-    </div>
-    <section class="hero">
-      <h2>Images from <em>Lorem Picsum</em></h2>
-      <p>Visit <a href="https://picsum.photos/" target="_blank">that site</a> to learn how to use them.</p>
-    </section>
+    
+   
+    
     <section class="grid-cont">
+
+
+      
+
+
+
+
+      
       <article class="card">
         <div class="card-content">
-          <span class="close"><button class="close-btn">&times;</button></span>
           <img src="https://picsum.photos/seed/1/480/320" alt="alt-text reads . . .">
           <div class="card-text">
             <h4>Best Part of the Bridge</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis lacinia diam, sed finibus leo. Vestibulum luctus, elit nec ultricies pellentesque, ex ex fermentum erat, at facilisis quam tortor id metus. Cras porttitor luctus lacus, eu commodo sapien. Etiam finibus posuere nisi, non imperdiet ligula iaculis ac. Donec suscipit ex ac consectetur rhoncus.</p>
-            <p>Morbi non imperdiet urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam sodales enim vel felis imperdiet, vel tempus ante tristique. Aenean vitae commodo sapien, eget tincidunt mauris. Aliquam sodales viverra turpis, at faucibus velit sodales ac. Etiam aliquam nisl vitae justo fermentum condimentum. Sed quis lacinia velit, eget ultricies massa. Nulla facilisi.</p>
-          </div>
+            </div>
         </div>
-        <button class="open-modal">More <i data-feather="chevrons-up"></i></button>
       </article><!--end article.card-->
+      
+      
+      
       <article class="card">
         <div class="card-content">
-          <span class="close"><button class="close-btn">&times;</button></span>
           <img src="https://picsum.photos/seed/2/480/320" alt="alt-text reads . . .">
           <div class="card-text">
             <h4>Can't Work Like This</h4>
-            <p>Phasellus ut ipsum vel risus semper vulputate nec eu nisl. In fermentum lectus non nunc laoreet, non interdum justo aliquam. Sed imperdiet in quam nec luctus. Sed feugiat tincidunt lectus, ut commodo elit hendrerit quis. Nam interdum rhoncus erat, vitae aliquam quam auctor non.</p>
-            <p>Aliquam id pellentesque enim, eu tincidunt felis. Donec sagittis ipsum vel porttitor bibendum. Aenean eget facilisis eros. Vestibulum vel purus et dui varius finibus. Vivamus aliquet ligula et sem sollicitudin, sit amet dictum justo sodales.</p>
-          </div>
+            </div>
         </div>
-        <button class="open-modal">More <i data-feather="chevrons-up"></i></button>
       </article><!--end article.card-->
+      
+      
+      
       <article class="card">
         <div class="card-content">
-          <span class="close"><button class="close-btn">&times;</button></span>
           <img src="https://picsum.photos/seed/3/480/320" alt="alt-text reads . . .">
           <div class="card-text">
             <h4>Beam Me Up, Scotty</h4>
-            <p>Nam a fringilla purus. Fusce pellentesque fermentum est non auctor. Donec id auctor elit. Ut luctus ultrices dui congue molestie. Maecenas imperdiet placerat rutrum. Integer vel pretium risus, at gravida elit. Ut mi metus, venenatis vel sodales vel, elementum vitae enim. Nam maximus eros a ipsum pretium, sed vestibulum nibh rhoncus. Etiam volutpat urna purus, id aliquam nunc scelerisque non. Nam ipsum odio, convallis eget urna nec, elementum porttitor ligula.</p>
-            <p>Aliquam neque sem, egestas sit amet est in, pellentesque consequat quam. Quisque lobortis lorem turpis, eu interdum dui gravida at. Nunc magna ante, pellentesque at finibus vitae, mattis sed risus. Nunc euismod sed odio eget sagittis. Morbi vitae ligula ac ante fermentum commodo nec quis justo.</p>
-          </div>
+            </div>
         </div>
-        <button class="open-modal">More <i data-feather="chevrons-up"></i></button>
       </article><!--end article.card-->
+      
+      
+      
       <article class="card">
         <div class="card-content">
-          <span class="close"><button class="close-btn">&times;</button></span>
           <img src="https://picsum.photos/seed/8/480/320" alt="alt-text reads . . .">
           <div class="card-text">
             <h4>Autofocus is Turned Off</h4>
-            <p>Pellentesque ante ipsum, pretium sed dui vel, fermentum dignissim diam. Duis pulvinar metus elit, a lobortis dolor porta in. Ut mollis sodales tortor, finibus commodo velit iaculis et. Ut non posuere risus. Donec suscipit dictum neque, at condimentum quam vestibulum a. Aliquam dapibus enim sed neque consequat, in molestie nunc mattis. Etiam nulla ligula, vestibulum id sapien eget, porta molestie lacus. Integer lobortis egestas tellus eget ultricies.</p>
-            <p>Suspendisse eget enim eget mauris condimentum mollis. Suspendisse et euismod lectus, sit amet tincidunt nibh. Praesent ornare elit ipsum. Maecenas blandit convallis tincidunt. Morbi diam enim, pharetra scelerisque euismod sed, condimentum ornare elit. Etiam consequat sodales diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a mollis tortor.</p>
-          </div>
+            </div>
         </div>
-        <button class="open-modal">More <i data-feather="chevrons-up"></i></button>
       </article><!--end article.card-->
+
+
+
+      <article class="card">
+        <div class="card-content">
+          <img src="https://picsum.photos/seed/8/480/320" alt="alt-text reads . . .">
+          <div class="card-text">
+            <h4>Autofocus is Turned Off</h4>
+            </div>
+        </div>
+      </article><!--end article.card-->
+
+
+
+      <article class="card">
+        <div class="card-content">
+          <img src="https://picsum.photos/seed/8/480/320" alt="alt-text reads . . .">
+          <div class="card-text">
+            <h4>Autofocus is Turned Off</h4>
+            </div>
+        </div>
+      </article><!--end article.card-->
+    
+    
+    
+    
     </section>
   </main>
-  <aside id="modal-wrap"></aside>
   <footer>
-    <p>&copy;2022 Your Name</p>
+    <p>&copy;2023 Abigail Spector</p>
   </footer>
   <script src="https://unpkg.com/feather-icons"></script>
   <script>
     feather.replace();
   </script>
-  <script src="js/page.js"></script>
+  
 </body>
 </html>
