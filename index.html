@@ -5,22 +5,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media Gallery</title>
-  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="styless.css">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200..300" rel="stylesheet" />  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta&family=Nunito:wght@500&display=swap" rel="stylesheet">
+
 
 </head>
 
 <body>
 
   <header class="tnav">
+    
     <nav id="site-nav" class="nav-wrap">
+
+      <img src="images/logo.png" alt="AdventureAwaits" />
+
       <a href="#" class="nav-link">Home</a>
       <a href="#" class="nav-link">About</a>
-      <a href="#" class="nav-link">News</a>
+      <a href="#" class="nav-link">Favorites</a>
       <a href="#" class="nav-link">Contact</a>
+      <a href="#" class="nav-link">Sign In</a>
+    
+      <a href="#" class="nav-link" id="trigram" onclick="navToggle()"></a>
     </nav>
-    <a href="#" class="nav-link" id="trigram" onclick="navToggle()"></a>
+    
   </header>
   <main>
     
@@ -28,8 +40,9 @@
     
     <section class="slideshow">
       <figure class="slides">
-        <img src="https://picsum.photos/seed/1st/1440/520" />
+        <img src="https://picsum.photos/1440/520" />
       </figure>
+      <!--
       <figure class="slides">
         <img src="https://picsum.photos/seed/2nd/1440/520" />
       </figure>
@@ -45,6 +58,7 @@
       <figure class="slides">
         <img src="https://picsum.photos/seed/6th/1440/520" />
       </figure>
+    -->
       <div class="controls">
         <button class="prev" onclick="plusSlides(-1)">&#8249;</button>
         <button class="next" onclick="plusSlides(1)">&#8250;</button>
@@ -59,78 +73,387 @@
     <section class="grid-cont">
 
 
-      
-
-
-
-
-      
       <article class="card">
         <div class="card-content">
-          <img src="https://picsum.photos/seed/1/480/320" alt="alt-text reads . . .">
-          <div class="card-text">
-            <h4>Best Part of the Bridge</h4>
+
+         <div class="header_img">
+          <img src="https://picsum.photos/id/10/480/320" alt="alt-text reads . . .">
+          <button class="material-symbols-outlined"> play_circle</button>
+        </div>
+
+        <div class="card-text">
+          <h4>Best Part of the Bridge</h4>
+        </div>
+
+
+            <div class="buttons">
+                  <button title="Seen" class="material-symbols-outlined">check_circle</button>
+                  <button title="Trailer" class="material-symbols-outlined">smart_display</button>
+                  <button title="Add" class="material-symbols-outlined">add_circle</button>
+                  <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
             </div>
+
+            <div class="stats">
+              <span class="rate">4.5</span>
+              <span title="stars" class="material-symbols-outlined">star_half</span>
+              <span class="rating">TV&ndash;14</span>
+              <span class="seasons">2 seasons</span>
+              <span class="quality">$$</span>
+            </div>
+  
+            <div class="tags">
+              <span>Science Fiction,</span>
+              <span>Fantasy,</span>
+              <span>Superhero,</span>
+              <span>Action-Adventure</span>
+            </div>
+
+
         </div>
       </article><!--end article.card-->
       
       
-      
-      <article class="card">
-        <div class="card-content">
-          <img src="https://picsum.photos/seed/2/480/320" alt="alt-text reads . . .">
-          <div class="card-text">
-            <h4>Can't Work Like This</h4>
-            </div>
-        </div>
-      </article><!--end article.card-->
-      
-      
-      
-      <article class="card">
-        <div class="card-content">
-          <img src="https://picsum.photos/seed/3/480/320" alt="alt-text reads . . .">
-          <div class="card-text">
-            <h4>Beam Me Up, Scotty</h4>
-            </div>
-        </div>
-      </article><!--end article.card-->
-      
-      
-      
-      <article class="card">
-        <div class="card-content">
-          <img src="https://picsum.photos/seed/8/480/320" alt="alt-text reads . . .">
-          <div class="card-text">
-            <h4>Autofocus is Turned Off</h4>
-            </div>
-        </div>
-      </article><!--end article.card-->
-
 
 
       <article class="card">
         <div class="card-content">
-          <img src="https://picsum.photos/seed/8/480/320" alt="alt-text reads . . .">
-          <div class="card-text">
-            <h4>Autofocus is Turned Off</h4>
+
+         <div class="header_img">
+          <img src="https://picsum.photos/id/22/480/320" alt="alt-text reads . . .">
+          <button class="material-symbols-outlined"> play_circle</button>
+        </div>
+
+        <div class="card-text">
+          <h4>Best Part of the Bridge</h4>
+        </div>
+
+
+            <div class="buttons">
+                  <button title="Seen" class="material-symbols-outlined">check_circle</button>
+                  <button title="Trailer" class="material-symbols-outlined">smart_display</button>
+                  <button title="Add" class="material-symbols-outlined">add_circle</button>
+                  <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
             </div>
+
+            <div class="stats">
+              <span class="rate">4.5</span>
+              <span title="stars" class="material-symbols-outlined">star_half</span>
+              <span class="rating">TV&ndash;14</span>
+              <span class="seasons">2 seasons</span>
+              <span class="quality">$$$</span>
+            </div>
+  
+            <div class="tags">
+              <span>Science Fiction,</span>
+              <span>Fantasy,</span>
+              <span>Superhero,</span>
+              <span>Action-Adventure</span>
+            </div>
+
+
         </div>
       </article><!--end article.card-->
+      
 
 
 
       <article class="card">
         <div class="card-content">
-          <img src="https://picsum.photos/seed/8/480/320" alt="alt-text reads . . .">
-          <div class="card-text">
-            <h4>Autofocus is Turned Off</h4>
+
+         <div class="header_img">
+          <img src="https://picsum.photos/id/26/480/320" alt="alt-text reads . . .">
+          <button class="material-symbols-outlined"> play_circle</button>
+        </div>
+
+        <div class="card-text">
+          <h4>Best Part of the Bridge</h4>
+        </div>
+
+
+            <div class="buttons">
+                  <button title="Seen" class="material-symbols-outlined">check_circle</button>
+                  <button title="Trailer" class="material-symbols-outlined">smart_display</button>
+                  <button title="Add" class="material-symbols-outlined">add_circle</button>
+                  <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
             </div>
+
+            <div class="stats">
+              <span class="rate">4.5</span>
+              <span title="stars" class="material-symbols-outlined">star_half</span>
+              <span class="rating">TV&ndash;14</span>
+              <span class="seasons">2 seasons</span>
+              <span class="quality">$</span>
+            </div>
+  
+            <div class="tags">
+              <span>Science Fiction,</span>
+              <span>Fantasy,</span>
+              <span>Superhero,</span>
+              <span>Action-Adventure</span>
+            </div>
+
+
         </div>
       </article><!--end article.card-->
+      
+
+
+
+      <article class="card">
+        <div class="card-content">
+
+         <div class="header_img">
+          <img src="https://picsum.photos/id/40/480/320" alt="alt-text reads . . .">
+          <button class="material-symbols-outlined"> play_circle</button>
+        </div>
+
+        <div class="card-text">
+          <h4>Best Part of the Bridge</h4>
+        </div>
+
+
+            <div class="buttons">
+                  <button title="Seen" class="material-symbols-outlined">check_circle</button>
+                  <button title="Trailer" class="material-symbols-outlined">smart_display</button>
+                  <button title="Add" class="material-symbols-outlined">add_circle</button>
+                  <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+            </div>
+
+            <div class="stats">
+              <span class="rate">4.5</span>
+              <span title="stars" class="material-symbols-outlined">star_half</span>
+              <span class="rating">TV&ndash;14</span>
+              <span class="seasons">2 seasons</span>
+              <span class="quality">$</span>
+            </div>
+  
+            <div class="tags">
+              <span>Science Fiction,</span>
+              <span>Fantasy,</span>
+              <span>Superhero,</span>
+              <span>Action-Adventure</span>
+            </div>
+
+
+        </div>
+      </article><!--end article.card-->
+      
+
+
+
+      <article class="card">
+        <div class="card-content">
+
+         <div class="header_img">
+          <img src="https://picsum.photos/id/43/480/320" alt="alt-text reads . . .">
+          <button class="material-symbols-outlined"> play_circle</button>
+        </div>
+
+        <div class="card-text">
+          <h4>Best Part of the Bridge</h4>
+        </div>
+
+
+            <div class="buttons">
+                  <button title="Seen" class="material-symbols-outlined">check_circle</button>
+                  <button title="Trailer" class="material-symbols-outlined">smart_display</button>
+                  <button title="Add" class="material-symbols-outlined">add_circle</button>
+                  <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+            </div>
+
+            <div class="stats">
+              <span class="rate">4.5</span>
+              <span title="stars" class="material-symbols-outlined">star_half</span>
+              <span class="rating">TV&ndash;14</span>
+              <span class="seasons">2 seasons</span>
+              <span class="quality">$$$</span>
+            </div>
+  
+            <div class="tags">
+              <span>Science Fiction,</span>
+              <span>Fantasy,</span>
+              <span>Superhero,</span>
+              <span>Action-Adventure</span>
+            </div>
+
+
+        </div>
+      </article><!--end article.card-->
+      
+
+
+
+
+      <article class="card">
+        <div class="card-content">
+
+         <div class="header_img">
+          <img src="https://picsum.photos/id/73/480/320" alt="alt-text reads . . .">
+          <button class="material-symbols-outlined"> play_circle</button>
+        </div>
+
+        <div class="card-text">
+          <h4>Best Part of the Bridge</h4>
+        </div>
+
+
+            <div class="buttons">
+                  <button title="Seen" class="material-symbols-outlined">check_circle</button>
+                  <button title="Trailer" class="material-symbols-outlined">smart_display</button>
+                  <button title="Add" class="material-symbols-outlined">add_circle</button>
+                  <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+            </div>
+
+            <div class="stats">
+              <span class="rate">4.5</span>
+              <span title="stars" class="material-symbols-outlined">star_half</span>
+              <span class="rating">TV&ndash;14</span>
+              <span class="seasons">2 seasons</span>
+              <span class="quality">$$</span>
+            </div>
+  
+            <div class="tags">
+              <span>Science Fiction,</span>
+              <span>Fantasy,</span>
+              <span>Superhero,</span>
+              <span>Action-Adventure</span>
+            </div>
+
+
+        </div>
+      </article><!--end article.card-->
+
+
+
+
+
+      <article class="card">
+        <div class="card-content">
+
+         <div class="header_img">
+          <img src="https://picsum.photos/id/91/480/320" alt="alt-text reads . . .">
+          <button class="material-symbols-outlined"> play_circle</button>
+        </div>
+
+        <div class="card-text">
+          <h4>Best Part of the Bridge</h4>
+        </div>
+
+
+            <div class="buttons">
+                  <button title="Seen" class="material-symbols-outlined">check_circle</button>
+                  <button title="Trailer" class="material-symbols-outlined">smart_display</button>
+                  <button title="Add" class="material-symbols-outlined">add_circle</button>
+                  <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+            </div>
+
+            <div class="stats">
+              <span class="rate">4.5</span>
+              <span title="stars" class="material-symbols-outlined">star_half</span>
+              <span class="rating">TV&ndash;14</span>
+              <span class="seasons">2 seasons</span>
+              <span class="quality">$</span>
+            </div>
+  
+            <div class="tags">
+              <span>Science Fiction,</span>
+              <span>Fantasy,</span>
+              <span>Superhero,</span>
+              <span>Action-Adventure</span>
+            </div>
+
+
+        </div>
+      </article><!--end article.card-->
+
+
+
+
+      <article class="card">
+        <div class="card-content">
+
+         <div class="header_img">
+          <img src="https://picsum.photos/id/117/480/320" alt="alt-text reads . . .">
+          <button class="material-symbols-outlined"> play_circle</button>
+        </div>
+
+        <div class="card-text">
+          <h4>Best Part of the Bridge</h4>
+        </div>
+
+
+            <div class="buttons">
+                  <button title="Seen" class="material-symbols-outlined">check_circle</button>
+                  <button title="Trailer" class="material-symbols-outlined">smart_display</button>
+                  <button title="Add" class="material-symbols-outlined">add_circle</button>
+                  <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+            </div>
+
+            <div class="stats">
+              <span class="rate">4.5</span>
+              <span title="stars" class="material-symbols-outlined">star_half</span>
+              <span class="rating">TV&ndash;14</span>
+              <span class="seasons">2 seasons</span>
+              <span class="quality">$</span>
+            </div>
+  
+            <div class="tags">
+              <span>Science Fiction,</span>
+              <span>Fantasy,</span>
+              <span>Superhero,</span>
+              <span>Action-Adventure</span>
+            </div>
+
+
+        </div>
+      </article><!--end article.card-->
+
+
+
+
+      <article class="card">
+        <div class="card-content">
+
+         <div class="header_img">
+          <img src="https://picsum.photos/id/133/480/320" alt="alt-text reads . . .">
+          <button class="material-symbols-outlined"> play_circle</button>
+        </div>
+
+        <div class="card-text">
+          <h4>Best Part of the Bridge</h4>
+        </div>
+
+
+            <div class="buttons">
+                  <button title="Seen" class="material-symbols-outlined">check_circle</button>
+                  <button title="Trailer" class="material-symbols-outlined">smart_display</button>
+                  <button title="Add" class="material-symbols-outlined">add_circle</button>
+                  <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+            </div>
+
+            <div class="stats">
+              <span class="rate">4.5</span>
+              <span title="stars" class="material-symbols-outlined">star_half</span>
+              <span class="rating">TV&ndash;14</span>
+              <span class="seasons">2 seasons</span>
+              <span class="quality">$$</span>
+            </div>
+  
+            <div class="tags">
+              <span>Science Fiction,</span>
+              <span>Fantasy,</span>
+              <span>Superhero,</span>
+              <span>Action-Adventure</span>
+            </div>
+
+
+        </div>
+      </article><!--end article.card-->
+      
+        
     
-    
-    
+
+
     
     </section>
   </main>

@@ -1,21 +1,34 @@
 nav { 
-  background-color: #464066; /*-- nav background --*/
+  background-color: #464066; 
   padding: 1rem 2rem; /*-- inside padding --*/
   display: flex; /*-- nav is a flex container --*/
-  min-height: 6rem; /*-- nav has a minimum height --*/
-  justify-content: space-between; /*-- excess space is distributed between flex children along the main axis --*/
-  align-items: center; /*-- flex children are centered on the cross axis  --*/
+  min-height: 6rem; 
+  
+  align-items: center; 
+  z-index: 2;
 }
-nav a { /*-- targets the nav links --*/
-  padding-left: 1.5rem; /*-- keeps links separated --*/
-  color: #c2bfbf; /*-- link color --*/
-  font-weight: 500; /*-- heavier type weight --*/
-  text-decoration: none; /*-- removes default link underline --*/
-  transition: all .2s ease-in-out; /*-- gives a transition for hover effects --*/
+nav a { 
+  font-family: 'Mukta', sans-serif;
+  font-size: 25px;
+  padding-left: 2rem; 
+  color: #c2bfbf; 
+  
+  text-decoration: none; 
+  transition: all .2s ease-in-out; 
+  justify-content: flex-end;
 }
-nav a:hover { /*-- nav links on hover --*/
-  color: #466aad; /*-- changes link color on hover --*/
+nav a:hover { 
+  color: #466aad;
 }
+
+nav img {
+  z-index: 1;
+  height: 150px;
+  width: 200px;
+  margin-right: auto;
+}
+
+
 
 /*-- not sure why its not showing up --*/
 a.trigram { /*-- hamburger menu icon nav link --*/
@@ -25,20 +38,36 @@ a.trigram { /*-- hamburger menu icon nav link --*/
 }
 
 
+
 main {
-  padding: 1rem 2rem; /*-- adds inside space around the main content area --*/
+  padding: 1rem 1rem; /*-- adds inside space around the main content area --*/
 }
+
 .slideshow { /*-- replace these styles with your slideshow styles --*/
   display: flex; /*-- declares a flex container --*/
   justify-content: center; /*-- center in the main axis --*/
   align-items: center; /*-- center in the cross axis --*/
-  height: 55rem; /*-- fixed hieght, probably delete this --*/
+  height: 40rem; 
   
   border-radius: 8px; /*-- rounded corners --*/
   background-color: #c2bfbf; /*-- a bit of light background color --*/
   color: var(--dkmid); /*-- text color is mid --*/
   position: relative; /*-- allows explicit positioning for children --*/
 }
+
+.slides img {
+  display: flex; /*-- declares a flex container --*/
+  justify-content: center; /*-- center in the main axis --*/
+  align-items: center; /*-- center in the cross axis --*/
+  height: 40rem; 
+  width: auto;
+  
+  border-radius: 8px; /*-- rounded corners --*/
+  position: relative; /*-- allows explicit positioning for children --*/
+}
+
+
+
 .controls button { /*-- you'll probably replace all .controls styles with your own --*/
   cursor: pointer; /*-- changes hover cursor to the hand --*/
   position: absolute; /*-- positions arrows absolutely--*/
@@ -52,7 +81,7 @@ main {
   transition: 0.2s ease; /*-- sets transition speed for arrow hover--*/
 }
 .controls button:hover {
-  color: #466aad; /*-- changes button color on hover --*/
+  color: #466aad; 
 }
 .controls button:nth-child(1) {
   left: 1rem; /*-- positions first arrow to the left --*/
@@ -60,8 +89,6 @@ main {
 .controls button:nth-child(2) {
   right: 1rem; /*-- positions second arrow to the right --*/
 }
-
-
 
 
 .grid-cont { /*-- styles the main grid container for media cards --*/
@@ -80,22 +107,120 @@ main {
 @media screen and (min-width: 1280px) { /*-- next size up, there are three equal columns --*/
   .grid-cont {grid-template-columns: repeat(3, 1fr);}
 }
-@media screen and (min-width: 1440px) { /*-- at the largest sizes, there are four equal columns --*/
-  .grid-cont {grid-template-columns: repeat(4, 1fr);}
-}
+
+
+
 
 
 
 .card { /*-- selects .card elements --*/
   padding: 2%; /*-- a little bit of flexible space inside the card --*/
-  display: flex; /*-- card is a flex container --*/
-  flex-direction: column; /*-- flow is downward --*/
-  border-radius: 8px; /*-- curved edges --*/
-  border: 2px dashed var(--dkmid); /*-- dashed border --*/
-  background-color: #5e5f63; /*-- a little bit of light color --*/
+  display: flex; 
+  flex-direction: column; 
+  border-radius: 15px; 
+  background-color: #575151; 
+  box-shadow: 0 3px 10px rgba(0,0,0,.5);
+}
+.card:hover {
+  box-shadow: 0 3px 30px rgba(0,0,0,.5);
 }
 
 
+.header_img {
+  position: relative;
+}
+.header_img  img {
+  border-radius: 15px 15px 0px 0px;
+  z-index: 3;
+}
+.header_img  button {
+  background-color: rgba(0,0,0,0.5);
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: whitesmoke;
+  z-index: 5;
+  clip-path:circle(45%);
+}
+.header_img  button:hover {
+  background-color: rgba(207, 205, 205, 0.5);
+}
+.header_img .material-symbols-outlined {
+  font-size: 5rem;
+  font-variation-settings: 'wght' 400;
+}
+
+
+
+.card-text {
+
+  justify-content: space-between;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(55%, 0%);
+
+}
+
+.buttons {
+  justify-content: space-between;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(5%, -150%);
+}
+.buttons :last-child {
+  margin-left: auto;
+}
+
+
+.stats {
+  font-family: 'Mukta', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  justify-content: space-between;
+  top: 50%;
+  left: 50%;
+  transform: translate(9%, -60%);
+}
+.stats > *:not(:nth-child(2)) {
+  border: 2px solid #ffffff;
+  padding: 5px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 25px;
+}
+.stats > *:nth-child(1) {
+  border: 2px solid #ffffff;
+  padding: 5px 25px 5px 5px;
+
+
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 25px;
+
+
+}
+.stats > *:nth-child(2) {
+  transform: translate(-230%, 20% );
+}
+.stats > *:nth-child(3) {
+  transform: translate(-70%, 25%); 
+}
+
+
+.tags {
+  font-family: 'Mukta', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  justify-content: space-between;
+  top: 50%;
+  left: 50%;
+  transform: translate(10%, 20%);
+}
+.tags :last-child {
+  margin-left: auto;
+}
 
 
 
@@ -106,7 +231,7 @@ footer {
   background-color: #464066; /*-- light mid color --*/
   padding: 1rem 2rem; /*-- inside space to match the nav --*/
   display: flex; /*-- might as well --*/
-  height: 6rem; /*-- fixed height  --*/
+  height: 4rem; /*-- fixed height  --*/
   justify-content: space-between; /*-- horizontal center --*/
   align-items: center; /*-- vertical center --*/
 }
