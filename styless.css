@@ -30,29 +30,12 @@ nav img {
 
 
 
-a.trigram {
-  display: block; /* Display as a block element */
-  font-size: 2rem; /* Adjust the size as needed */
-  color: #c2bfbf; /* Icon color */
-  text-decoration: none;
-  margin-right: 1rem; /* Add spacing between the icon and other links */
-  cursor: pointer; /* Change cursor to a pointer on hover */
+/*-- not sure why its not showing up --*/
+a.trigram { /*-- hamburger menu icon nav link --*/
+  display: none; /*-- hidden by default --*/
+  font-size: 3rem; /*-- makes it considerably larger --*/
+  align-self: stretch; /*-- tells it to fill the cross axis when present --*/
 }
-
-/* Define the styles for the trigram icon, for example, use a Unicode character or an image */
-a.trigram::before {
-  content: "\2630"; /* Use Unicode character for the trigram (☰) */
-  /* You can also use an image for the icon with the background property */
-}
-
-/* Style the trigram icon on hover */
-a.trigram:hover {
-  color: #466aad; /* Change color on hover */
-}
-
-
-
-
 
 
 
@@ -68,7 +51,6 @@ main {
   
   border-radius: 8px; /*-- rounded corners --*/
   background-color: #c2bfbf; /*-- a bit of light background color --*/
-  color: var(--dkmid); /*-- text color is mid --*/
   position: relative; /*-- allows explicit positioning for children --*/
 }
 
@@ -101,10 +83,10 @@ main {
   color: #466aad; 
 }
 .controls button:nth-child(1) {
-  left: 1rem; /*-- positions first arrow to the left --*/
+  left: 1rem; 
 }
 .controls button:nth-child(2) {
-  right: 1rem; /*-- positions second arrow to the right --*/
+  right: 1rem; 
 }
 
 
@@ -200,7 +182,7 @@ margin-right: 10px;
 
   top: 50%;
   left: 50%;
-  transform: translate(3%, -250%);
+  transform: translate(3%, -300%);
 }
 .buttons :last-child {
   margin-left: auto;
