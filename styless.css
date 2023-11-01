@@ -30,12 +30,29 @@ nav img {
 
 
 
-/*-- not sure why its not showing up --*/
-a.trigram { /*-- hamburger menu icon nav link --*/
-  display: none; /*-- hidden by default --*/
-  font-size: 3rem; /*-- makes it considerably larger --*/
-  align-self: stretch; /*-- tells it to fill the cross axis when present --*/
+a.trigram {
+  display: block; /* Display as a block element */
+  font-size: 2rem; /* Adjust the size as needed */
+  color: #c2bfbf; /* Icon color */
+  text-decoration: none;
+  margin-right: 1rem; /* Add spacing between the icon and other links */
+  cursor: pointer; /* Change cursor to a pointer on hover */
 }
+
+/* Define the styles for the trigram icon, for example, use a Unicode character or an image */
+a.trigram::before {
+  content: "\2630"; /* Use Unicode character for the trigram (☰) */
+  /* You can also use an image for the icon with the background property */
+}
+
+/* Style the trigram icon on hover */
+a.trigram:hover {
+  color: #466aad; /* Change color on hover */
+}
+
+
+
+
 
 
 
@@ -114,7 +131,7 @@ main {
 
 
 .card { /*-- selects .card elements --*/
-  padding: 2%; /*-- a little bit of flexible space inside the card --*/
+  padding: 1%; /*-- a little bit of flexible space inside the card --*/
   display: flex; 
   flex-direction: column; 
   border-radius: 15px; 
@@ -132,6 +149,8 @@ main {
 .header_img  img {
   border-radius: 15px 15px 0px 0px;
   z-index: 3;
+  height: 100%;
+  width: 100%;
 }
 .header_img  button {
   background-color: rgba(0,0,0,0.5);
@@ -156,20 +175,32 @@ main {
 
 .card-text {
 
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Mukta', sans-serif;
+  font-family: 'Nunito', sans-serif;
+
   justify-content: space-between;
 
-  top: 50%;
-  left: 50%;
-  transform: translate(55%, 0%);
+  font-size: 25px;
+  color: #dedcdc;
+
+  text-align: right;
+
+margin-right: 10px;
+
+  overflow: hidden;
+  word-wrap: break-word;
 
 }
 
+
+/* fix this so that its just the button and not the background*/
 .buttons {
   justify-content: space-between;
 
   top: 50%;
   left: 50%;
-  transform: translate(5%, -150%);
+  transform: translate(3%, -250%);
 }
 .buttons :last-child {
   margin-left: auto;
@@ -180,48 +211,35 @@ main {
   font-family: 'Mukta', sans-serif;
   font-family: 'Nunito', sans-serif;
   justify-content: space-between;
-  top: 50%;
-  left: 50%;
-  transform: translate(9%, -60%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: -50px;
+
 }
 .stats > *:not(:nth-child(2)) {
   border: 2px solid #ffffff;
   padding: 5px;
   border-radius: 10px;
   margin-left: 10px;
-  margin-right: 25px;
+  margin-right: 10px;
 }
-.stats > *:nth-child(1) {
-  border: 2px solid #ffffff;
-  padding: 5px 25px 5px 5px;
 
-
-  border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 25px;
-
-
-}
-.stats > *:nth-child(2) {
-  transform: translate(-230%, 20% );
-}
-.stats > *:nth-child(3) {
-  transform: translate(-70%, 25%); 
-}
 
 
 .tags {
   font-family: 'Mukta', sans-serif;
   font-family: 'Nunito', sans-serif;
-  justify-content: space-between;
-  top: 50%;
-  left: 50%;
-  transform: translate(10%, 20%);
-}
-.tags :last-child {
-  margin-left: auto;
-}
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  margin-top: 10px;
+
+}
 
 
 
