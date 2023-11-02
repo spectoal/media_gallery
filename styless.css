@@ -206,6 +206,7 @@ margin-right: 10px;
   font-family: 'Mukta', sans-serif;
   font-family: 'Nunito', sans-serif;
   justify-content: space-between;
+  color: #dedcdc;
 
   display: flex;
   justify-content: center;
@@ -227,7 +228,8 @@ margin-right: 10px;
 .tags {
   font-family: 'Mukta', sans-serif;
   font-family: 'Nunito', sans-serif;
-  
+  color: #dedcdc;
+
   display: flex;
   justify-content: center;
   align-items: center;
