@@ -30,11 +30,23 @@ nav img {
 
 
 
-/*-- not sure why its not showing up --*/
-a.trigram { /*-- hamburger menu icon nav link --*/
-  display: none; /*-- hidden by default --*/
-  font-size: 3rem; /*-- makes it considerably larger --*/
+
+a#trigram { 
+  display: none; 
+  font-size: 3rem; 
   align-self: stretch; /*-- tells it to fill the cross axis when present --*/
+
+margin-top: 40px;
+
+}
+
+@media screen and (max-width: 768px) {
+  a.nav-link {
+    display: none;
+  }
+  a#trigram {
+    display: inherit;
+  }
 }
 
 
@@ -52,6 +64,7 @@ main {
   border-radius: 8px; /*-- rounded corners --*/
   background-color: #c2bfbf; /*-- a bit of light background color --*/
   position: relative; /*-- allows explicit positioning for children --*/
+  overflow-x: hidden;
 }
 
 .slides img {
@@ -60,7 +73,7 @@ main {
   align-items: center; /*-- center in the cross axis --*/
   height: 40rem; 
   width: auto;
-  
+ 
   border-radius: 8px; /*-- rounded corners --*/
   position: relative; /*-- allows explicit positioning for children --*/
 }
